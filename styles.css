@@ -1,0 +1,175 @@
+
+/* Overall styles for the body */
+
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Styling the wrapper that wraps the entire clock body */
+.wrapper{
+
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/sunrise.jpg);
+  background-size: 100% 100%;
+  
+  text-align: center;
+}
+
+.clock{
+  width: 80%;
+  height: 60%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+color: rgb(158, 176, 195);
+font-weight: 700;
+text-transform: capitalize;
+}
+.output{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.display{
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  height: 100%;
+}
+.time{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+width: 30%;
+height: 100%;
+border: 10px solid rgba(0, 0, 255,0.4);
+box-sizing: border-box;
+
+}
+
+/*  Styling parts of the display */
+
+.time .top{
+  font-size: 6rem;
+  font-weight: 700;
+  color: rgb(203, 214, 214);
+  background-color: rgba(138, 43, 226,0.4);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+}
+.time .bottom{
+background-color: rgba(0, 0, 255,0.4);
+height: 30%;
+width: 100%;
+display: flex;
+justify-content:  center;
+align-items: center;
+color: azure;
+text-transform: uppercase;
+}
+.periodOfDay{
+  background-color: rgba(0, 0, 255,0.3);;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: azure;
+  font-size: 4rem;
+  border: 10px solid rgba(138, 43, 226,0.1);
+  box-sizing: border-box;
+}
+
+#message{
+  min-height: 10%;
+  width: 80%;
+  font-style: italic;
+  font-size: 2rem;
+  color: rgb(158, 176, 195);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: rgba(138, 43, 226,0.4);
+  padding: 2rem;
+  border: 10px solid rgba(0, 0, 255,0.4);
+  box-sizing: border-box;
+
+}
+
+
+/* Break points */
+
+@media (max-width: 850px ){
+.clock{
+  font-size: 1.5rem;
+}
+.time .top{
+  font-size: 4.5rem;
+}
+.time .bottom{
+  font-size: 1.5rem;
+}
+#message{
+  font-size: 1.5rem;
+}
+.periodOfDay{
+  font-size: 3rem;
+}
+}
+
+@media (max-width: 600px ){
+  .clock{
+    font-size: 1.5rem;
+  }
+  .time .top{
+    font-size: 3.5rem;
+  }
+  .time .bottom{
+    font-size: 1rem;
+  }
+  #message{
+    font-size: 1.2rem;
+  }
+  .periodOfDay{
+    font-size: 1.5rem;
+  }
+
+  }
+
+  @media (max-width: 450px ){
+    .clock{
+      font-size: 1rem;
+    }
+    .time .top{
+      font-size: 2.5rem;
+    }
+
+    #message{
+      font-size: 1.2rem;
+    }
+  
+    }
